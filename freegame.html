@@ -146,3 +146,50 @@
                 <iframe id="game-frame" src="" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
+<h2 class="section-title">All Free Games</h2>
+        <div class="game-grid">
+            
+            <div class="game-card" onclick="loadGame('Motorcycle Racing', 'https://play.b0b.xyz/games/moto-x3m/')">
+                <div class="game-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400');"></div>
+                <div class="game-info">
+                    <div class="game-name">Motorcycle Racing</div>
+                    <div class="game-genre">Action / Racing</div>
+                </div>
+            </div>
+
+            <div class="game-card" onclick="loadGame('Subway Surfers Clone', 'https://play.b0b.xyz/games/subway-surfers/')">
+                <div class="game-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=400');"></div>
+                <div class="game-info">
+                    <div class="game-name">Subway Surfers</div>
+                    <div class="game-genre">Endless Runner</div>
+                </div>
+            </div>
+
+            <div class="game-card" onclick="loadGame('Space Shooter', 'https://play.b0b.xyz/games/space-invaders/')">
+                <div class="game-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=400');"></div>
+                <div class="game-info">
+                    <div class="game-name">Space Shooter</div>
+                    <div class="game-genre">Retro / Arcade</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // JavaScript សម្រាប់ដូរហ្គេមនៅក្នុង Screen ពេលយើងចុចលើ Card នីមួយៗ
+        function loadGame(title, url) {
+            document.getElementById('current-title').innerText = "Now Playing: " + title;
+            document.getElementById('game-frame').src = url;
+            
+            // អូសអេក្រង់ទៅលើវិញដើម្បីឱ្យអ្នកលេងបានឃើញអេក្រង់ហ្គេមច្បាស់
+            window.scrollTo({ top: 150, behavior: 'smooth' });
+        }
+
+        // ហៅហ្គេមទីមួយឱ្យដើរអូតូពេលបើកវេបសាយដំបូង
+        window.onload = function() {
+            loadGame('Motorcycle Racing', 'https://play.b0b.xyz/games/moto-x3m/');
+        };
+    </script>
+</body>
+</html>
